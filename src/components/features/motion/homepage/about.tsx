@@ -8,6 +8,7 @@ import FaceBookIcon from "../../../../../public/images/Facebook.png";
 import InstaIcon from "../../../../../public/images/Insta.png";
 import GithubIcon from "../../../../../public/images/github.png";
 import { motion } from "framer-motion"; // Correct import
+import Link from "next/link";
 
 interface AboutComponentProps {
     
@@ -15,7 +16,7 @@ interface AboutComponentProps {
 
 export const AboutComponent: React.FC<AboutComponentProps> = () => {
     return (
-        <div className="grid grid-cols-6 gap-[2px]">
+<div className="grid grid-cols-2 sm:grid-cols-6 gap-[2px]">
             
             <motion.div
                 className="col-span-6 md:col-span-5 p-4 md:p-16 bg-blue rounded-lg flex justify-center flex-col w-full"
@@ -81,6 +82,9 @@ export const AboutComponent: React.FC<AboutComponentProps> = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.6 }}
                 >
+                     <Link href={"https://github.com/AbhishekPundir04"}>
+                        <Image src={GithubIcon} height={20} alt="github" />
+                        </Link>
                     <div>
                         <Image src={TwitterIcon} height={20} width={20} alt="twitter" />
                     </div>
@@ -90,13 +94,11 @@ export const AboutComponent: React.FC<AboutComponentProps> = () => {
                     <div>
                         <Linkedin height={20} className="text-white" />
                     </div>
-                    <div>
+                    <Link href={"/"}>
                         <Image src={InstaIcon} height={20} alt="instagram" />
-                    </div>
-                    <div>
-                        <Image src={GithubIcon} height={20} alt="github" />
-                    </div>
-                </motion.div>
+                    </Link>
+                   
+                        </motion.div>
             </motion.div>
         </div>
     );
