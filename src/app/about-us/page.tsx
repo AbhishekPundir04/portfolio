@@ -5,7 +5,7 @@ const About: React.FC = () => {
     <div className=" min-h-screen flex flex-col items-center justify-between">
       <header className="text-center p-8 bg-blue-500 w-full">
         <h1 className="text-4xl font-bold text-white">Abhishek Pundir</h1>
-        <p className="text-xl text-white mt-4">Software Developer | React & Next.js Enthusiast</p>
+        <p className="text-xl text-white mt-4">Software Developer | React & Next.js</p>
       </header>
 
       <main className="flex flex-col items-center space-y-10 p-8 w-full max-w-5xl">

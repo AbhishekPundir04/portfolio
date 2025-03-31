@@ -3,7 +3,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Menu,Download } from "lucide-react";
+import { useState } from "react";
+import Sidebar from "@/components/features/motion/homepage/drawer/drawer";
 const Header = () => {
+  const [open,setOpen] = useState<boolean>(false)
+
   const handleDownload = () => {
     const resumeUrl = "/AbhishekPundir.pdf";
     const link = document.createElement("a");
@@ -34,9 +38,7 @@ const Header = () => {
             <Link href="/about-us" className="header_link">
               About
             </Link>
-            {/* <Link href="/servi" className="header_link">
-              Services
-            </Link> */}
+           
             <Link href="/contact" className="header_link">
               Contact
             </Link>
@@ -59,6 +61,7 @@ const Header = () => {
           </div>
         </div>
       </motion.header>
+      <Sidebar  />
     </>
   );
 };

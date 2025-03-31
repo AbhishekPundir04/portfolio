@@ -33,7 +33,7 @@ export default function BrandLoader({
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue"
+            className="text-3xl md:text-5xl font-bold text-black"
           >
             Abhishek Pundir
             </motion.h1>
